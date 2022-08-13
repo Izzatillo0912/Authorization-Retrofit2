@@ -42,15 +42,12 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity, "false", Toast.LENGTH_SHORT).show()
                     }
                 }
-
                 override fun onFailure(call: Call<LoginModel>, t: Throwable) {
                     Log.d("", "onFailure: ${t.localizedMessage}")
                     Toast.makeText(this@MainActivity, "False failure", Toast.LENGTH_SHORT).show()
                 }
             })
-
         }
-
     }
     fun checkUser(){
         if (dataSources.isLogin(this)){
